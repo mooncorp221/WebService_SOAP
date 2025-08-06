@@ -31,8 +31,8 @@ Ce projet Java expose un Web Service SOAP pour gérer des **secteurs** et des **
 
 * Java 17
 * JAX-WS (SOAP)
-* Hibernate ORM + PostgreSQL
-* Tomcat 9 ou 10
+* Hibernate ORM + PostgreSQL 17
+* Tomcat 10.1.43
 * JAXB pour la sérialisation XML
 
 ---

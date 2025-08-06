@@ -99,17 +99,7 @@ hibernate.show_sql=true
 
 
 
-**Mouhamed NDIAYE** - 2025
+**Mouhamed NDIAYE** - M1GLISI
 
----
-
-##  Améliorations possibles
-
-* Ajouter des exceptions SOAP personnalisées
-* Intégrer WS-Security
-* Ajouter une version REST (Spring Boot)
-* Swagger/OpenAPI pour documentation REST (si ajout)
-
----
 
 > Pour toute contribution, n'hésitez pas à forker le repo et proposer un pull request.

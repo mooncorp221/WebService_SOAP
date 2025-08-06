@@ -27,6 +27,11 @@ public class ClasseSoapService {
     public ClasseDto getClasseById(Long id) {
         return classeService.findById(id);
     }
+    @WebMethod
+    public List<ClasseDto> getClassesBySectorId(@WebParam(name = "sectorId") Long id) {
+        return classeService.getBySectorId(id);
+    }
+
 
     @WebMethod
     public List<ClasseDto> getClassesBySector(String sectorName) {

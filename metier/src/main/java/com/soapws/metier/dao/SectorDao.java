@@ -4,7 +4,7 @@ import com.soapws.metier.config.HibernateUtil;
 import com.soapws.metier.entity.Sector;
 import org.hibernate.Session;
 
-import javax.persistence.Query;
+;
 
 public class SectorDao extends RepositoryImpl<Sector> implements ISectorDao {
 
@@ -16,7 +16,7 @@ public class SectorDao extends RepositoryImpl<Sector> implements ISectorDao {
 
     public Sector findByName(String name) {
         String jpql = "FROM Sector WHERE name = :name";
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try (Session sessions = HibernateUtil.getSessionFactory().openSession()) {
             return session.createQuery(jpql, Sector.class)
                     .setParameter("name", name)
                     .uniqueResult();

@@ -14,8 +14,9 @@ public class Sector {
     @Column(nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "sector", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "sector", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Classe> classes;
+
 
     // Getters et Setters
     public Long getId() {

@@ -2,11 +2,7 @@ package com.soapws.metier.mapper;
 
 import com.soapws.metier.dto.SectorDto;
 import com.soapws.metier.entity.Sector;
-import com.soapws.metier.entity.Classe;
-import com.soapws.metier.dto.ClasseDto;
 
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class SectorMapper {
 

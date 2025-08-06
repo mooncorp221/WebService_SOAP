@@ -7,6 +7,7 @@ import com.soapws.metier.entity.Classe;
 import com.soapws.metier.entity.Sector;
 import com.soapws.metier.mapper.ClasseMapper;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -58,6 +59,14 @@ public class ClasseService implements IClasseService {
 
         List<Classe> classes = classeDao.findBySector(sector);
         return classes.stream()
+                .map(ClasseMapper::toDto)
+                .collect(Collectors.toList());
+    }
+    public List<ClasseDto> getBySectorId(Long id) {
+        Sector sector = sectorDao.findById(id, new Sector());
+        if (sector == null || sector.getClasses() == null) return new ArrayList<>();
+        return sector.getClasses()
+                .stream()
                 .map(ClasseMapper::toDto)
                 .collect(Collectors.toList());
     }

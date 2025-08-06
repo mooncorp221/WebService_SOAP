@@ -1,0 +1,27 @@
+
+services:
+  db:
+    image: postgres:15
+    container_name: soap_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: soap_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: soap_ws
+    depends_on:
+      - db
+    ports:
+      - "9090:8080"
+    environment:
+      - TZ=Africa/Dakar
+
+volumes:
+  db_data:

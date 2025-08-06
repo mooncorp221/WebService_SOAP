@@ -34,6 +34,7 @@ Ce projet Java expose un Web Service SOAP pour gérer des **secteurs** et des **
 * Hibernate ORM + PostgreSQL 17
 * Tomcat 10.1.43
 * JAXB pour la sérialisation XML
+* Docker
 
 ---
 
@@ -94,6 +95,10 @@ hibernate.show_sql=true
 2. Fournir le WSDL : `http://localhost:8080/soap/classe?wsdl`
 3. SoapUI génère les opérations disponibles
 4. Envoyer des requêtes (voir exemple ci-dessus)
+5. <img width="1353" height="499" alt="image" src="https://github.com/user-attachments/assets/30bb8a3c-b3a4-49b6-8265-d342e2c43d73" />
+
+6. Ou bien : déployer via Docker avec docker-compose up --build
+7. Accéder à : http://localhost:9090/soap/
 
 ---
 

@@ -1,0 +1,4 @@
+com\soapws\webservice\service\ISectorSoapService.class
+com\soapws\webservice\service\SectorSoapService.class
+com\soapws\webservice\service\IClasseSoapService.class
+com\soapws\webservice\service\ClasseSoapService.class
